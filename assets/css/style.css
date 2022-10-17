@@ -10,7 +10,7 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: auto;
+    margin: 2rem auto;
     display: flex;
     flex-wrap: wrap;
 }
@@ -20,4 +20,8 @@ body {
     aspect-ratio: 1/1;
     border: 1px solid palegreen;
 
+}
+
+.active {
+    background-color: palevioletred;
 }

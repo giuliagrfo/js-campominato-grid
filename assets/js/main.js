@@ -25,3 +25,17 @@ function cellGenerator(maxCell, containerElement, cellMarkup) {
         containerElement.innerHTML += cellMarkup;
     }
 }
+
+const cellsList = document.getElementsByClassName('cell');
+
+clickOn(cellsList);
+
+function clickOn(allCells) {
+    for(let i = 0; i < allCells.length; i++) {
+        const currentCell = allCells[i];
+        currentCell.addEventListener('click', function(){
+            console.log('Ho cliccato sulla casella');
+            currentCell.classList.toggle('active');
+        })
+    }
+}
