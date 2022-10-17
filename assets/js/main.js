@@ -10,21 +10,33 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
 const containerEl = document.querySelector('.container');
 
 // Definisco una variabile con il markup per creare una cella
-const cellEl = `<div class="cell"></div>`;
-console.log(cellEl);
+// const cellEl = `<div class="cell"></div>`;
+// console.log(cellEl);
 
 // Salvo in una variabile il numero delle celle 
 const cellsNumber = 100;
 
 // utilizzare una funzione e il ciclo for per inserire tutte le celle nel markup
-cellGenerator(cellsNumber, containerEl, cellEl )
+// cellGenerator(cellsNumber, containerEl, cellEl )
 
-function cellGenerator(maxCell, containerElement, cellMarkup) {
-    for(let i = 0; i < maxCell; i++){
+function cellGenerator(num) {
+    const cellEl = document.createElement('div');
+    cellEl.className = 'cell';
+    cellEl.innerText = num
+    return cellEl
 
-        containerElement.innerHTML += cellMarkup;
-    }
 }
+
+// for(let i = 0; i < maxCell; i++){
+
+//     containerElement.innerHTML += cellMarkup;
+// }
+
+function campGenerator() {
+    
+}
+
+
 
 const cellsList = document.getElementsByClassName('cell');
 
