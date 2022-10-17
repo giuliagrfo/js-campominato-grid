@@ -16,16 +16,25 @@ const containerEl = document.querySelector('.container');
 // Salvo in una variabile il numero delle celle 
 const cellsNumber = 100;
 
-function numCell (num) {
+
+const buttonEl = document.querySelector('.button');
+
+buttonEl.addEventListener('click', function() {
+    campGenerator(cellsNumber, containerEl )
+    
+})
+
+
+function numCell () {
     for (let i = 1; i <= cellsNumber; i++){
         // console.log(i);
-       
+        
     }   
-
+    
 }
 
+// campGenerator(cellsNumber, containerEl)
 
-campGenerator(cellsNumber, containerEl)
 
 // utilizzare una funzione per creare le celle
 
@@ -37,6 +46,7 @@ function cellGenerator(cell) {
     
 }
 
+
 // utilizzare una funzione e il ciclo for per inserire tutte le celle nel markup
 function campGenerator(numberOfCells, markupEl) {
     for(let i = 0; i <= 100; i++){
@@ -46,8 +56,6 @@ function campGenerator(numberOfCells, markupEl) {
         
     }
 }
-
-
 
 const cellsList = document.querySelectorAll('.cell');
 
@@ -61,9 +69,11 @@ function clickOn(allCells) {
             currentCell.classList.toggle('active');
             currentCell.insertAdjacentHTML('beforeend', `${i}`)
             console.log(i);
-
+            
         })
     }
 }
+
+
 
 
