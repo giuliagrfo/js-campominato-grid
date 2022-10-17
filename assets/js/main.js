@@ -16,25 +16,31 @@ const containerEl = document.querySelector('.container');
 // Salvo in una variabile il numero delle celle 
 const cellsNumber = 100;
 
-// utilizzare una funzione e il ciclo for per inserire tutte le celle nel markup
-// cellGenerator(cellsNumber, containerEl, cellEl )
+campGenerator(cellsNumber, containerEl)
+
+// utilizzare una funzione per creare le celle
 
 function cellGenerator(num) {
     const cellEl = document.createElement('div');
-    cellEl.className = 'cell';
+    cellEl.className = "cell";
     cellEl.innerText = num
     return cellEl
-
-}
-
-// for(let i = 0; i < maxCell; i++){
-
-//     containerElement.innerHTML += cellMarkup;
-// }
-
-function campGenerator() {
     
 }
+
+
+// utilizzare una funzione e il ciclo for per inserire tutte le celle nel markup
+function campGenerator(numberOfCells, markupEl) {
+    for(let i = 0; i < 100; i++){
+        const currentNumber = numberOfCells[i];
+        const cellElement = cellGenerator(currentNumber);
+        markupEl.insertAdjacentElement('beforeend', cellElement)
+       }
+}
+
+
+
+
 
 
 
