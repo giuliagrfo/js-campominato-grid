@@ -16,10 +16,13 @@ const containerEl = document.querySelector('.container');
 // Salvo in una variabile il numero delle celle 
 const cellsNumber = 100;
 
-for (let i = 1; i <= cellsNumber; i++){
-    console.log(i);
-   
-}   
+function numCell (num) {
+    for (let i = 1; i <= cellsNumber; i++){
+        // console.log(i);
+       
+    }   
+
+}
 
 
 campGenerator(cellsNumber, containerEl)
@@ -56,6 +59,7 @@ function clickOn(allCells) {
         currentCell.addEventListener('click', function(){
             // console.log('Ho cliccato sulla casella');
             currentCell.classList.toggle('active');
+            currentCell.insertAdjacentHTML('beforeend', `${i}`)
             console.log(i);
 
         })
