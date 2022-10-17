@@ -16,6 +16,12 @@ const containerEl = document.querySelector('.container');
 // Salvo in una variabile il numero delle celle 
 const cellsNumber = 100;
 
+for (let i = 1; i <= cellsNumber; i++){
+    console.log(i);
+   
+}   
+
+
 campGenerator(cellsNumber, containerEl)
 
 // utilizzare una funzione per creare le celle
@@ -23,17 +29,19 @@ campGenerator(cellsNumber, containerEl)
 function cellGenerator(cell) {
     const cellEl = document.createElement('div');
     cellEl.className = "cell";
+    // cellEl.innerText = cellsNumber
     return cellEl
     
 }
 
 // utilizzare una funzione e il ciclo for per inserire tutte le celle nel markup
 function campGenerator(numberOfCells, markupEl) {
-    for(let i = 0; i < 100; i++){
-        const currentNumber = numberOfCells[i];
-        const cellElement = cellGenerator(currentNumber);
-        markupEl.insertAdjacentElement('beforeend', cellElement)
-       }
+    for(let i = 0; i <= 100; i++){
+        const currentCell = numberOfCells[i];
+        const cellElement = cellGenerator(currentCell);
+        markupEl.insertAdjacentElement('beforeend', cellElement);
+        
+    }
 }
 
 
@@ -46,9 +54,12 @@ function clickOn(allCells) {
     for(let i = 0; i < allCells.length; i++) {
         const currentCell = allCells[i];
         currentCell.addEventListener('click', function(){
-            console.log('Ho cliccato sulla casella');
+            // console.log('Ho cliccato sulla casella');
             currentCell.classList.toggle('active');
+            console.log(i);
+
         })
     }
 }
+
 
