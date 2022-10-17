@@ -20,14 +20,12 @@ campGenerator(cellsNumber, containerEl)
 
 // utilizzare una funzione per creare le celle
 
-function cellGenerator(num) {
+function cellGenerator(cell) {
     const cellEl = document.createElement('div');
     cellEl.className = "cell";
-    cellEl.innerText = num
     return cellEl
     
 }
-
 
 // utilizzare una funzione e il ciclo for per inserire tutte le celle nel markup
 function campGenerator(numberOfCells, markupEl) {
@@ -40,11 +38,7 @@ function campGenerator(numberOfCells, markupEl) {
 
 
 
-
-
-
-
-const cellsList = document.getElementsByClassName('cell');
+const cellsList = document.querySelectorAll('.cell');
 
 clickOn(cellsList);
 
@@ -57,3 +51,4 @@ function clickOn(allCells) {
         })
     }
 }
+
