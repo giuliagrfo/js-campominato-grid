@@ -39,12 +39,11 @@ function cellGenerator(cell) {
 // utilizzare una funzione e il ciclo for per inserire tutte le celle nel markup
 function campGenerator(numberOfCells, markupEl) {
     for(let i = 1; i <= 100; i++){
-        const currentCell = numberOfCells[i];
+        const currentCell = `${i}`;
         console.log(currentCell);
         const cellElement = cellGenerator(currentCell);
         console.log(cellElement);
         markupEl.insertAdjacentElement('beforeend', cellElement);
-        
     }
 }
 
