@@ -52,7 +52,7 @@ const cellsList = document.querySelectorAll('.cell');
 clickOn(cellsList);
 // utilizzo una funzione per rendere le celle cliccabili
 function clickOn(allCells) {
-    for(let i = 1; i < allCells.length; i++) {
+    for(let i = 0; i < allCells.length; i++) {
         const currentCell = allCells[i];
         currentCell.addEventListener('click', function(){
             console.log('Ho cliccato sulla casella');
