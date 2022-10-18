@@ -10,10 +10,14 @@ body {
 }
 
 .play {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100px;
+    align-items: center; */
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    
 }
 
 button {
@@ -59,6 +63,7 @@ button:hover {
 .title {
     text-align: center;
     display: none;
+    margin: 2rem 0;
 }    
     
 .show {
