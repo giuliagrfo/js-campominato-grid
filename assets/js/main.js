@@ -17,15 +17,12 @@ const containerEl = document.querySelector('.container');
 const cellsNumber = 100;
 
 
-// const buttonEl = document.querySelector('button');
+const buttonEl = document.querySelector('button');
 
-// buttonEl.addEventListener('click', function() {
-//     campGenerator(cellsNumber, containerEl)
+buttonEl.addEventListener('click', function() {
+    campGenerator(cellsNumber, containerEl)
     
-// })
-
-campGenerator(cellsNumber, containerEl)
-
+})
 
 // utilizzare una funzione per creare le celle
 function cellGenerator(n) {
@@ -33,7 +30,6 @@ function cellGenerator(n) {
     cellEl.className = "cell";
     cellEl.innerText = n;
     return cellEl
-
 }
 
 // utilizzare una funzione e il ciclo for per inserire tutte le celle nel markup
@@ -43,26 +39,13 @@ function campGenerator(numberOfCells, markupEl) {
         const cellElement = cellGenerator(currentCell);
         markupEl.insertAdjacentElement('beforeend', cellElement);
         cellGenerator(i)
-    }
-}
-
-
-const cellsList = document.querySelectorAll('.cell');
-
-clickOn(cellsList);
-// utilizzo una funzione per rendere le celle cliccabili
-function clickOn(allCells) {
-    for(let i = 0; i < allCells.length; i++) {
-        const currentCell = allCells[i];
-        currentCell.addEventListener('click', function(){
+        // rendo le caselle cliccabili
+        cellElement.addEventListener('click', function(){
             console.log('Ho cliccato sulla casella');
-            currentCell.classList.toggle('active');
-            // currentCell.insertAdjacentHTML('beforeend', `${i}`)
+            cellElement.classList.toggle('active');
             console.log(i);
             
         })
     }
 }
-
-
 
