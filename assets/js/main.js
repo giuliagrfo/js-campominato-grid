@@ -18,10 +18,12 @@ const cellsNumber = 100;
 
 
 const buttonEl = document.querySelector('button');
+const titleEl = document.querySelector('.title')
 
 buttonEl.addEventListener('click', function() {
     campGenerator(cellsNumber, containerEl)
-    
+    buttonEl.classList.add('none');
+    titleEl.classList.add('show')
 })
 
 // utilizzare una funzione per creare le celle
@@ -44,7 +46,6 @@ function campGenerator(numberOfCells, markupEl) {
             console.log('Ho cliccato sulla casella');
             cellElement.classList.toggle('active');
             console.log(i);
-            
         })
     }
 }

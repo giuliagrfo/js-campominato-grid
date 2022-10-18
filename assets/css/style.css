@@ -6,18 +6,30 @@
 
 body {
     background-color: black;
+    color: palegreen;
 }
 
-.button {
-    text-align: center;
+.play {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100px;
 }
 
-a {
-    text-decoration: none;
+button {
+    border: none;
+    background-color: black;
     color: palegreen;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.121);
+    color: red;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .container {
@@ -36,8 +48,19 @@ a {
     align-items: center;
 }
 
-
 .active {
     background-color: rgb(83, 146, 255);
 }
 
+.none {
+    display: none;
+}
+
+.title {
+    text-align: center;
+    display: none;
+}    
+    
+.show {
+    display: block;
+}
