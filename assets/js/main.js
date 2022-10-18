@@ -28,22 +28,21 @@ campGenerator(cellsNumber, containerEl)
 
 
 // utilizzare una funzione per creare le celle
-function cellGenerator(cell) {
-    for(let i = 1; i <= 100; i++) {
-        const cellEl = document.createElement('div');
-        cellEl.className = "cell";
-        return cellEl
-    }
+function cellGenerator(n) {
+    const cellEl = document.createElement('div');
+    cellEl.className = "cell";
+    cellEl.innerText = n;
+    return cellEl
+
 }
 
 // utilizzare una funzione e il ciclo for per inserire tutte le celle nel markup
 function campGenerator(numberOfCells, markupEl) {
     for(let i = 1; i <= 100; i++){
         const currentCell = `${i}`;
-        console.log(currentCell);
         const cellElement = cellGenerator(currentCell);
-        console.log(cellElement);
         markupEl.insertAdjacentElement('beforeend', cellElement);
+        cellGenerator(i)
     }
 }
 
@@ -58,7 +57,7 @@ function clickOn(allCells) {
         currentCell.addEventListener('click', function(){
             console.log('Ho cliccato sulla casella');
             currentCell.classList.toggle('active');
-            currentCell.insertAdjacentHTML('beforeend', `${i}`)
+            // currentCell.insertAdjacentHTML('beforeend', `${i}`)
             console.log(i);
             
         })
